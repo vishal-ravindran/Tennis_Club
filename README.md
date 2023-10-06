@@ -1,4 +1,4 @@
-![image](https://github.com/vishal-ravindran/Tennis_Club/assets/104803633/3aad913f-6b57-4324-a946-f3128eedc929)# Tennis_Club
+# Tennis_Club
 
 ## Trying a simple Django App that uses Django forms to input data and save to a database and allow small modifications on the data or to delete members
 
