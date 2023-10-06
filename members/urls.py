@@ -11,5 +11,8 @@ urlpatterns=[
     path('add_member/', views.add_member, name='add_member'),
     path('delete_member/<int:id>/', views.delete_member, name='delete_member'),
     path('edit_member/<int:id>/', views.edit_member, name='edit_member'),
+    path('search/', views.search_form, name='search_form'),
+    path('search_results/', views.display_result, name='search_results'),
+
     # path('delete_confirmation/<int:id>/', views.delete_confirmation, name='delete_confirmation'),
 ]

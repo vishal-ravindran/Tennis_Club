@@ -1,50 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
 body {
-  margin:0;
+  margin: 0;
   font: 600 18px 'Source Sans Pro', sans-serif;
   letter-spacing: 0.64px;
   color: #585d74;
   justify-content: center;
 }
+
 .topnav {
-  background-color:#375BDC;
-  color:#ffffff;
-  padding:20px;
+  background-color: #375BDC;
+  color: #ffffff;
+  padding: 20px;
   margin: auto;
 }
-.topnav a:link, .topnav a:visited {
+
+.topnav a:link,
+.topnav a:visited {
   text-decoration: none;
-  color: #ffffff; 
+  color: #ffffff;
 }
-.topnav a:hover, .topnav a:active {
+
+.topnav a:hover,
+.topnav a:active {
   text-decoration: underline;
 }
-.mycard {
-  background-color: #f1f1f1;
-  background-image: linear-gradient(to bottom, #375BDC, #4D70EF); 
-  background-size: 100% 120px;
-  background-repeat: no-repeat;
-  margin: 40px auto;
-  /* width: 350px; */
-  width: 70%;
-  border-radius: 5px;
-  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23); 
-  padding: 20px;
-  justify-content: center;
-}
+
+
 .mycard h1 {
   text-align: center;
-  color:#ffffff;
-  margin:20px 10px 60px 0;
+  color: #ffffff;
+  margin: 20px 10px 60px 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
+
 li {
   background-color: #ffffff;
-  background-image: linear-gradient(to right, #375BDC, #4D70EF); 
+  background-image: linear-gradient(to right, #375BDC, #4D70EF);
   background-size: 50px 60px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -57,27 +54,120 @@ li {
   justify-content: center;
   align-items: center;
 }
+
 li:hover {
   transform: scale(1.1);
 }
-a:link, a:visited {
-  color: #375BDC; 
+
+a:link,
+a:visited {
+  color: #375BDC;
 }
-.main, .main h1 {
-  text-align:center;
-  color:#375BDC;
+
+.main,
+.main h1 {
+  text-align: center;
+  color: #375BDC;
 }
-.listed{
-    margin:2% 2%;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    max-width: 70%;
+
+.listed {
+  margin: 2% 2%;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 70%;
 }
-.member-caption{
-    margin: 10px;
+
+.myCards {
+  margin: 10px;
+  padding: 10px;
 }
-.myCards{
-    margin: 10px;
-    padding: 10px;
+
+.search_fields {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 10px auto;
+  padding: auto;
 }
+
+.search_fields label {
+  margin: 5px 0;
+  width: 20%;
+}
+
+.search_fields input {
+  width: 300px;
+  padding: 5px;
+}
+
+.search_fields button {
+  margin: 50px;
+  width: 400px;
+  padding: 5px;
+}
+
+.search_form {
+  margin: 40px;
+  display: block;
+}
+.myCard {
+  background-color: #f1f1f1;
+  background-image: linear-gradient(to bottom, #375BDC, #4D70EF);
+  background-size: 100% 120px;
+  background-repeat: no-repeat;
+  margin: 40px auto; /* Center horizontally with auto margins */
+  width: 70%;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+  padding: 20px;
+  text-align: center; /* Center content horizontally */
+}
+
+.member-caption {
+  font-size: 24px;
+  color: #333; /* Text color */
+  margin-bottom: 20px; /* Spacing between heading and list */
+}
+
+.listed_names {
+  list-style-type: none; /* Remove list bullets */
+  padding: 0;
+}
+
+.listed_names li {
+  margin-bottom: 10px; /* Spacing between list items */
+}
+
+.listed_names a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #007BFF; /* Link color */
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.listed_names a:hover {
+  color: #0056b3; /* Hover color */
+}
+.search_results{
+  background-color: #f1f1f1;
+  background-image: linear-gradient(to bottom, #375BDC, #4D70EF);
+  background-size: 100% 120px;
+  background-repeat: no-repeat;
+  margin: 30px auto; /* Center horizontally with auto margins */
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+  padding: 10px;
+  text-align: center; /* Center content horizontally */
+}
+.search_results li{
+
+  margin: 10% auto; /* Center horizontally with auto margins */
+  padding: 10px;
+  text-align: center; /* Center content horizontally */
+}
+

@@ -1,3 +1,4 @@
+from django.db.models import Q
 from .forms import MemberForm
 from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse
@@ -86,6 +87,46 @@ def delete_member(request, id):
         return redirect('members')  
     member.delete()
     return redirect('members')
+
+def search_method(request):
+    first_name = request.GET.get('first_name_search', '')
+    last_name = request.GET.get('last_name_search', '')
+    phone = request.GET.get('Phone_search', '')
+    date = request.GET.get('Date_search', '')
+
+    query = Q()
+
+    if first_name:
+        query |= Q(first_name__icontains = first_name)
+    if last_name:
+        query |= Q(last_name__icontains = last_name)
+    if phone:
+        query |= Q(Phone__icontains = phone)
+    if date:
+        query |= Q(join_date__icontains=date)
+
+    search_result = Member.objects.filter('query')
+
+    return render(request, 'search.html', {'search_result':search_result})
+
+def search_form(request):
+    return render(request, 'search.html')
+
+def display_result(request):
+    first_name = request.GET.get('first_name_search', '')
+    last_name = request.GET.get('last_name_search', '')
+    phone = request.GET.get('Phone_search', '')
+    date = request.GET.get('Date_search', '')
+
+    search_result = Member.objects.filter(
+        firstName__icontains=first_name,
+        lastName__icontains=last_name,
+        phone__icontains=phone,
+        join_date__icontains=date
+    )
+
+    return render(request, 'search_results.html', {'search_result': search_result})
+
 
 # def delete_confirmation(request, id):
 #     member = get_object_or_404(Member, pk=id)

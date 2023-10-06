@@ -1,0 +1,39 @@
+{% extends 'master.html' %}
+
+{% block title %}
+<h2>Search for members</h2>
+{% endblock %}
+
+{% block content %}
+<h2>Please enter the details for searching</h2>
+
+<!-- <form  class="search_form" method="get" action="{% url 'search_form' %}"> -->
+<form  class="search_form" method="get" action="{% url 'search_results' %}">
+
+        <div class="search_fields">
+            <label for="first_name_search">First Name:</label>
+            <input type="search" class="search" name="first_name_search" placeholder="Please enter the first name">
+        </div>
+        
+        <div class="search_fields">
+            <label for="last_name_search">Last Name:</label>
+            <input type="search" class="search" name="last_name_search" placeholder="Please enter the Last name">
+        </div>
+        
+        <div class="search_fields">
+            <label for="Phone_search">Phone:</label>
+            <input type="search" class="search" name="Phone_search" placeholder="Please enter the Phone Number">
+        </div>
+        
+        <div class="search_fields">
+            <label for="Date_search">Date: (YYYY-MM-DD)</label>
+            <input type="search" class="search" name="Date_search" placeholder="Please enter the Join_date">
+        </div>
+        
+        <div class="search_fields">
+
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+</form>
+
+{% endblock %}

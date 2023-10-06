@@ -1,0 +1,31 @@
+<!-- search_results.html -->
+
+{% extends 'master.html' %}
+
+{% block title %}
+<h2>Search Results </h2>
+{% endblock %}
+
+{% block content %}
+
+
+{% if search_result %}
+
+<div class="search_results">
+<h2>Search Results:</h2>
+<ul>
+        {% for member in search_result %}
+        <li>
+            <strong>Name:</strong> {{ member.firstName }} {{ member.lastName }}<br>
+            <strong>Phone:</strong> {{ member.phone }}<br>
+            <strong>Join Date:</strong> {{ member.join_date }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% else %}
+<p>No results found.</p>
+{% endif %}
+
+{% endblock %}
+
