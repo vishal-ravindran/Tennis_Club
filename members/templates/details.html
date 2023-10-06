@@ -1,0 +1,26 @@
+    {% extends 'master.html' %}
+
+    {% block title %}
+    Details of Member :  {{member.firstName}} {{member.lastName}} 
+
+    {%endblock%}
+
+    {% block content %}
+    <div class="myCards">
+
+        <h1>{{member.firstName}} {{member.lastName}} </h1>
+        
+        <p>Phone : {{member.phone}}</p>
+        <p>Joined Date : {{member.join_date}}</p>
+        <p>Back to <a href="/members">Members</a></p>
+
+        <form method="post" action="{% url 'edit_member' member.id %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Edit Member</button>
+            <button type="button" class="btn btn-danger" onclick="location.href='{% url 'delete_member' member.id %}'">Delete Member</button>
+        </form>    
+        
+
+    </div>
+    {%endblock%}
+

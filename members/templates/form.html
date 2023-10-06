@@ -1,0 +1,71 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}
+Modify Members
+{% endblock %}
+
+{% block content %}
+<h1 class="h1-header">Please Enter the Details</h1>
+<form class="form" method="post" action="{% url 'add_member' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.firstName.label_tag }}
+        {{ form.firstName }}
+        {% if form.firstName.errors %}
+        <div class="alert alert-danger">
+            {{ form.firstName.errors }}
+        </div>
+        {% endif %}
+    </div>
+    <div class="form-group">
+        {{ form.lastName.label_tag }}
+        {{ form.lastName }}
+        {% if form.lastName.errors %}
+        <div class="alert alert-danger">
+            {{ form.lastName.errors }}
+        </div>
+        {% endif %}
+    </div>
+    <div class="form-group">
+        {{ form.phone.label_tag }}
+        {{ form.phone }}
+        {% if form.phone.errors %}
+        <div class="alert alert-danger">
+            {{ form.phone.errors }}
+        </div>
+        {% endif %}
+    </div>
+    <div class="form-group">
+        {{ form.date.label_tag }}
+        {{ form.date }}
+        {% if form.date.errors %}
+        <div class="alert alert-danger">
+            {{ form.date.errors }}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- <div class="form-group">
+        <label for="date_text">{{ form.date.label }}</label>
+        <div class="input-group">
+            {{ form.date }}
+            <div class="input-group-append">
+                <span class="input-group-text" id="date_picker_icon">
+                    <i class="far fa-calendar-alt"></i>
+                </span>
+            </div>
+        </div>
+        {% if form.date.errors %}
+        <div class="alert alert-danger">
+            {{ form.date.errors }}
+        </div>
+        {% endif %}
+    </div> -->
+    <!-- <input type="text" class="form-control" id="date_text" readonly> -->
+    <button type="submit" class="btn btn-primary">Add Member</button>
+
+</form>
+<script src="{% static 'datepicker.js' %}"></script>
+
+{% endblock %}
