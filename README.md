@@ -6,7 +6,8 @@
 ![image](https://github.com/vishal-ravindran/Tennis_Club/assets/104803633/36291d5a-dd7d-49bd-bd8e-43791cdb5bb3)
 
 ## All members Page
-![image](https://github.com/vishal-ravindran/Tennis_Club/assets/104803633/96299096-40ae-4fd2-8361-4c448fb39c06)
+![image](https://github.com/vishal-ravindran/Tennis_Club/assets/104803633/53fad993-3ec4-4ebf-9b3e-b6f01d45c1ae)
+
 
 ## Details of Individual Members
 ![image](https://github.com/vishal-ravindran/Tennis_Club/assets/104803633/b21848f6-f228-4bd4-94cd-1699206bbef2)
