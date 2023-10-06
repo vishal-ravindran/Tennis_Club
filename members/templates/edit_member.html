@@ -1,0 +1,19 @@
+{% extends 'master.html' %}
+
+{% block title %}
+Edit Member: {{ member.firstName }} {{ member.lastName }}
+{% endblock %}
+
+{% block content %}
+<div class="myCards">
+    <h1>Edit Member: {{ member.firstName }} {{ member.lastName }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Display form fields as paragraphs or customize as needed -->
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+
+    <p>Back to <a href="{% url 'details' id=member.id %}">Member Details</a></p>
+</div>
+{% endblock %}

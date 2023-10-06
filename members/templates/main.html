@@ -1,0 +1,22 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}
+My Tennis Club
+{% endblock %}
+
+
+{% block content %}
+<div class="main">
+
+    <h1>My Tennis Club</h1>
+    <img src="{% static 'images/tennis_icon.png' %}" alt="tennis_picture">
+    
+        <p style=" margin: 20px;">
+            Check out all our <a href="members/"> <button type="submit" class="btn btn-primary">All Members</button> </a>
+        </p>
+        <p style="display: inline-block; margin: 20px;">
+            Click to add new Members <button type="button" class="btn btn-primary" onclick="window.location.href='/form/'">Add members</button>
+        </p>
+</div>
+    {% endblock %}
